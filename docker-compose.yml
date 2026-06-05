@@ -1,0 +1,15 @@
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe:21-slim
+    container_name: erp-oracle-container
+    environment:
+      - ORACLE_PASSWORD=${ORACLE_DB_MASTER_PASSWORD}
+      - APP_USER=${ERP_DB_USER}
+      - APP_USER_PASSWORD=${ERP_DB_PASSWORD}
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle_data:/container-entrypoint-initdb.d
+
+volumes:
+    oracle_data: {}
