@@ -24,6 +24,15 @@ O ecossistema do ERP está sendo construído em fases estruturadas, garantindo q
 *   [ ] **Mapeamento da Entidade `Produto`** *(Próximo passo)*
 *   [ ] **Mapeamento da Entidade `Fornecedor`**
 
+### [Fase 2] - Refatoração Arquitetural e Padrões DDD (Planejado)
+*   [ ] **Introdução de *Value Objects*** (Isolamento de lógicas de negócio e validações auto-contidas, como GTIN e CPF/CNPJ).
+*   [ ] **Definição de *Aggregate Roots* (Raízes de Agregação)** (Garantia de consistência transacional do ecossistema).
+
+### [Fase 3] - Implementação das Camadas de Infraestrutura e CRUD (Planejado)
+*   [ ] **Criação dos Repositórios** (`Spring Data JPA`).
+*   [ ] **Camada de Serviço e DTOs** (Implementação das regras de aplicação e objetos de transferência de dados).
+*   [ ] **Controladores REST** (Exposição dos endpoints da API para consumo externo).
+
 ---
 
 ## 🚀 Como Subir o Ambiente Local
