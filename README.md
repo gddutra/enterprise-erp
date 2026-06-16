@@ -1,37 +1,16 @@
 # Enterprise ERP
 
-Este repositório contém o núcleo do projeto Enterprise ERP, um sistema de Planejamento de Recursos Empresariais modular em desenvolvimento para fins acadêmicos com Spring Boot e persistência robusta em banco de dados Oracle.
+Este repositório contém o núcleo do projeto Enterprise ERP, um sistema de Planejamento de Recursos Empresariais modular em desenvolvimento com Spring Boot e persistência robusta em banco de dados Oracle.
 
 ---
 
-## 📌 Status do Desenvolvimento (Roadmap)
+## 🛠️ Gestão do Projeto e Roadmap
 
-O ecossistema do ERP está sendo construído em fases estruturadas, garantindo que a infraestrutura e o modelo de negócios estejam alinhados com as melhores práticas de mercado corporativo.
+O escopo de engenharia, requisitos de negócio e decisões arquiteturais deste ecossistema são mapeados e rastreados através do GitHub Issues.
 
-### [Fase 0] - Inicialização da Infraestrutura (Concluído)
-*   **Banco de Dados:** Oracle Database 21c (XE) rodando via Docker.
-*   **Isolamento:** Configurado via Pluggable Database (PDB) no serviço `XEPDB1`.
-*   **Segurança:** Credenciais locais isoladas em arquivo `.env` (não versionado).
+A evolução das entregas (infraestrutura, modelagem do domínio, refatoração DDD e camadas de aplicação) pode ser acompanhada diretamente no painel de tarefas.
 
-### [Fase 1] - Modelagem e Mapeamento Base do Domínio (Em andamento)
-*   [x] **Mapeamento da Entidade `Cliente`**
-    *   Suporte a Pessoa Física e Jurídica gerenciado dinamicamente através de Enums (`TipoCliente`).
-    *   Controle de ciclo de vida cadastral via Enum (`StatusCadastro`).
-    *   Restrições explícitas de banco de dados (`nullable`, `unique`, tamanhos de campos VARCHAR2).
-    *   Controle rígido do tamanho de documentos (`numeroDocumento` limitado a 14 caracteres).
-    *   Estrutura de auditoria básica protegida contra modificações (`dataCadastro` com `updatable = false`).
-    *   Geração de chaves primárias otimizada para o dialeto Oracle através de `@SequenceGenerator` dedicado (`seq_id_cliente`).
-*   [x] **Mapeamento da Entidade `Produto`**
-*   [ ] **Mapeamento da Entidade `Fornecedor`** *(Próximo passo)*
-
-### [Fase 2] - Refatoração Arquitetural e Padrões DDD (Planejado)
-*   [ ] **Introdução de *Value Objects*** (Isolamento de lógicas de negócio e validações auto-contidas, como GTIN e CPF/CNPJ).
-*   [ ] **Definição de *Aggregate Roots* (Raízes de Agregação)** (Garantia de consistência transacional do ecossistema).
-
-### [Fase 3] - Implementação das Camadas de Infraestrutura e CRUD (Planejado)
-*   [ ] **Criação dos Repositórios** (`Spring Data JPA`).
-*   [ ] **Camada de Serviço e DTOs** (Implementação das regras de aplicação e objetos de transferência de dados).
-*   [ ] **Controladores REST** (Exposição dos endpoints da API para consumo externo).
+* 📋 **Roadmap técnico e tarefas:** [Issues / Quadro de Tarefas](./issues)
 
 ---
 
@@ -79,4 +58,4 @@ Usuário/Senha: Definidos no seu .env (erp_application)
 
 ---
 
-Autor: Gustavo Dutra - 2026.
+Autor: Gustavo Dutra.
