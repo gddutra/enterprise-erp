@@ -21,8 +21,8 @@ O ecossistema do ERP está sendo construído em fases estruturadas, garantindo q
     *   Controle rígido do tamanho de documentos (`numeroDocumento` limitado a 14 caracteres).
     *   Estrutura de auditoria básica protegida contra modificações (`dataCadastro` com `updatable = false`).
     *   Geração de chaves primárias otimizada para o dialeto Oracle através de `@SequenceGenerator` dedicado (`seq_id_cliente`).
-*   [ ] **Mapeamento da Entidade `Produto`** *(Próximo passo)*
-*   [ ] **Mapeamento da Entidade `Fornecedor`**
+*   [x] **Mapeamento da Entidade `Produto`**
+*   [ ] **Mapeamento da Entidade `Fornecedor`** *(Próximo passo)*
 
 ### [Fase 2] - Refatoração Arquitetural e Padrões DDD (Planejado)
 *   [ ] **Introdução de *Value Objects*** (Isolamento de lógicas de negócio e validações auto-contidas, como GTIN e CPF/CNPJ).
