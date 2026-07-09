@@ -19,6 +19,13 @@ public class Produto {
     @SequenceGenerator(name = "seq_id_produto", sequenceName = "seq_id_produto",  allocationSize = 1, initialValue = 1)
     @Column(name = "id_produto", comment = "Chave primária do produto (Sequence)")
     private Long id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_unidade_medida",
+            nullable = false,
+            foreignKey = @ForeignKey(name = "fk_produto_unidade_medida"),
+            comment = "Chave estrangeira (FK) conectando o produto à sua respectiva unidade de medida"
+    )
+    private UnidadeMedida unidadeMedida;
     @Column(name = "cd_gtin", length = 14, unique = true, nullable = false, comment = "Código de barras global do produto (EAN/GTIN)")
     private String gtin;
     @Column(name = "nm_produto", length = 150, nullable = false, comment = "Nome comercial do produto")
